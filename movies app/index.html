@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sorts+Mill+Goudy:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Movies App</title>
+
+</head>
+
+<body>
+    <header class="header">
+
+        <img class= "logo"  src="assets/logo.png">
+
+        <div class="menu">
+            <p id="watchlistButton" class="my-watchlist"> My watchlist </p>
+
+            <div class="search-container">
+                <img src="assets/search.svg" alt="Search" class="search-icon" id="search-icon">
+                <div class="searchinp">
+                    <input type="text" class="search-input" id="searchInput" placeholder="What are we watching today?">
+                    <ul id="suggestions" class="suggestions-list"></ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sort" id="sort">
+        <p class="sort-by">Sort by</p>
+
+        <div class="categories">
+            <p class="popularity">Popularity</p>
+            <p class="release">Release date</p>
+            <p class="rating">Rating</p>
+        </div>
+    </div>
+
+    <section id="randomFilms" class="random-films">
+        <div id="filmsGrid" class="grid-layout"></div>
+    </section>  
+
+ 
+    <div class="movie-details-modal">
+
+        <div class="movie-details-container">
+            <img src="assets/close.svg" class="close-btn">
+            <div class="poster">
+                <div class="poster-w-rating">
+                    <img src="" alt="Movie Poster">
+                    <div class="movieRating">
+                        <span></span>
+                    </div> 
+                </div>
+                <div class="watchlist-btn">
+                    <img class="like" src="assets/like.png"> 
+                    <p class="add">Add to watchlist</p> 
+                </div>
+            </div>
+
+            <div class="movie-info">
+                <h2></h2>
+                <div class="duration">
+                    <img class="clock" src="assets/clock.png">
+                    <p class="duration-text"></p>
+                </div>
+                <p class="description"></p>
+                <div class="watch-trailer-btn">
+                    <img class="trailer-img" src="assets/trailer.png"> 
+                    <p class="watch-trailer">Watch trailer</p> 
+                </div>
+            </div>
+        </div>
+    
+        <div class="cast-info">
+            <h3>Cast information</h3>
+            <div class="cast-list">
+                <div class="cast-member">
+                    <img src="">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="trailer-section">
+            <h3>Trailer</h3>
+            <iframe src="https://www.youtube.com/embed/your_trailer_link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+<!-- WATCHLIST -->
+<div id="watchlistContainer" class="watchlist-container">
+    <div class="watchlist-header">
+        <p>Your Watchlist</p>
+        <span id="closeWatchlist" class="close-bttn">Back to Home Page</span>
+    </div>
+    <div id="watchlistMovies" class="watchlist-movies">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

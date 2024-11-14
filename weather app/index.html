@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sorts+Mill+Goudy:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="weather-app">
+        <header class="header">
+            <div class="search-bar">
+                <input type="text" id="city-search" placeholder="Enter city name...">
+                <ul id="suggestionsList" class="suggestions-list"></ul>
+            </div>
+            
+            <section class="current-weather">
+                <div class="your-city">
+                    Your city:
+                    <div class="city-loc">
+                        <span class="city-name" id="city-name">Almaty</span> 
+                        <img class="location" src="assets/location.png" id="use-location" />
+                    </div> 
+                </div>
+                <div class="weather-main">
+                    <img src="" alt="" class="weather-icon" id="weather-icon">
+                    <div class="weather-info">
+                        <div class="weather-condition">
+                            <p id="weather-condition">Currently sunny</p>
+                        </div>
+                        <div class="temperature-display">
+                            <p class="temperature" id="temperature">10°C</p>
+                            <span class="toggle" id="toggle-unit">Show Fahrenheit</span>
+                        </div>
+                        <div class="details">
+                            <p class="humidity">Humidity: <span id="humidity"></span></p>
+                            <p class="wind-speed">Wind speed: <span id="wind-speed"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        
+        <section class="forecast">
+            <h3>5-day forecast</h3>
+            <div class="forecast-list">
+                <div class="forecast-item">
+                    <p class="date"></p>
+                    <p class="weather-cond"></p>
+                    <img class="forecast-pic" src="" alt="">
+                </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

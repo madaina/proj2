@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sorts+Mill+Goudy:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- прописала гамбургер, который понадобится для адаптивки -->
+    <div class="categories-menu-toggle" id="categoriesToggle">
+        ☰
+    </div>
+
+    <!-- здесь расположены объекты логотип и поиск (поле search и результаты)-->
+    <header>
+        <img src="assets/logo.svg" alt="logo" class="logo">
+        <div class="search-item">
+            <input type="text" id="searchInput" placeholder="Search any recipe">
+            <div id="suggestions" class="suggestions-list"></div>
+        </div>
+    </header>
+    
+    <!-- это элементы главной страницы: грид рецептов, сортировка, favorites лист-->
+    <main id="mainContent">
+        <div class="aside"> 
+            <!--aside: здесь можно сортировать рецепты по категориям, также сюда входит баттон 
+            с ссылкой на favorites-->
+            <nav class="categories">
+                <p class="categories-title">Categories</p>
+                <div id="searchByCategory" data-category="popular">
+                    <img src="assets/heart.svg" alt="heart-icon">
+                    <a href="#">Popular</a>
+                </div>
+                <div id="searchByCategory" data-category="dessert">
+                    <img src="assets/cupcake.svg" alt="cupcake-icon">
+                    <a href="#">Dessert</a>
+                </div>
+                <div id="searchByCategory" data-category="vegetarian">
+                    <img src="assets/leaf.svg" alt="leaf-icon">
+                    <a href="#">Vegetarian</a>
+                </div>
+                <div id="searchByCategory" data-category="drink">
+                    <img src="assets/drink.svg" alt="cup-icon">
+                    <a href="#">Drink</a>
+                </div>
+                <div id="searchByCategory" data-category="salad">
+                    <img src="assets/salad.svg" alt="salad-icon">
+                    <a href="#">Salad</a>
+                </div>
+            </nav>
+            
+            <div class="myFavorites">
+                <img class="myFavorites-icon" src="assets/myFavorites.svg" alt="">
+                <p class="myFavorites-text">Your favourite recipes</p>
+            </div>
+        </div>
+
+        <section id="randomRecipes" class="random-recipes">
+            <div id="recipeGrid" class="grid-layout"></div>
+        </section>        
+
+        
+    </main>
+
+    <!-- здесь расположен modal для просмотра деталей рецепта -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">
+            <img src="assets/close.svg" alt="X">
+            </span>
+            <div class="title-n-image">
+                <img id="recipeImage" src="" alt="Recipe Image" class="modal-image">
+                <h2 id="recipeTitle"></h2>
+            </div>
+            <div class="info">
+                <h3>Ingredients</h3>
+                <ul id="ingredientsList"></ul>
+                <h3>Instructions</h3>
+                <ol id="instructionsList"></ol>
+                <h3>Nutritional Information</h3>
+                <p id="nutritionInfo"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- здесь расположен modal с сохраненными рецептами -->
+    <div id="favoritesModal" class="modal">
+        <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Your Favorites</h2>
+        </div>
+    </div>
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
